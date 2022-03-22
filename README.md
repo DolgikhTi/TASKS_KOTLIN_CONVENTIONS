@@ -11,8 +11,11 @@ Using ranges implement a function that checks whether the date is in the range b
 You can build a range of any comparable elements. In Kotlin in checks are translated to the corresponding contains calls and .. to rangeTo calls:
 
 val list = listOf("a", "b")
+
 "a" in list  // list.contains("a")
+
 "a" !in list // !list.contains("a")
+
 date1..date2 // date1.rangeTo(date2)
 ___________________________________________________________________________________________________________________________________________________________________
 
@@ -36,5 +39,7 @@ Objects with the invoke() method can be invoked as a function.
 You can add an invoke extension for any class, but it's better not to overuse it:
 
   operator fun Int.invoke() { println(this) }
-1() //huh?..
+
+  1() //huh?..
+  
 Implement the function Invokable.invoke() to count the number of times it is invoked.
